@@ -9,12 +9,12 @@ data:
   ui_properties_file_name: "user-interface.properties"
 
   # # file-like keys
-  # game.properties: |
-  #   enemy.types=aliens,monsters
-  #   player.maximum-lives=5    
-  # user-interface.properties: |
-  #   color.good=purple
-  #   color.bad=yellow
-  #   allow.textmode=true  
+  game.properties: |
+    enemy.types=aliens,monsters
+    player.maximum-lives=5    
+  user-interface.properties: |
+    color.good=purple
+    color.bad=yellow
+    allow.textmode=true  
 
 
