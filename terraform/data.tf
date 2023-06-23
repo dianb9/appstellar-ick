@@ -4,6 +4,8 @@ data "aws_ami" "ubuntu" {
   filter {
     name   = "virtualization-type"
     values = ["hvm"]
+  }
+  filter {
     name = "architecture"
     values = ["x86_64"]
   }
