@@ -1,0 +1,3 @@
+namespace: webapp-ardian
+configMapName: db-configmap
+secretName: db-secret
