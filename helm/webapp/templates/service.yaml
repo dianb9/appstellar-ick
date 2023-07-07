@@ -8,6 +8,6 @@ spec:
     app: nginx
     matchLabels:
   ports:
-    - protocols: TCP
+    - protocol: TCP
         port: 80
         targetPort: 3000
