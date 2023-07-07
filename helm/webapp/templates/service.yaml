@@ -4,7 +4,10 @@ metadata:
   name: svc
   namespace: {{ .Values.namespace }} 
 spec:
-  selector:
+  selector: 
+    app: nginx
     matchLabels:
-      app: nginx
-    
+    ports:
+      - protocols: TCP
+        port: 80
+        targetPort: 3000
