@@ -7,16 +7,17 @@ metadata:
   namespace: webapp-ardian
   annotations:
             app.kubernetes.io/name: aws-load-balancer-controller
+            app.kubernetes.io/scheme: internet-facing
 spec:
   ingressClassName: alb 
   rules:
-    - host: ardian.appstellar.training
-        http:
+    - host: "ardian.appstellar.training"
+      http:
          paths:
-             - path: /
-               pathType: Prefix
-              backend:
-                service: svc
-                  name: 
+         - pathType: Prefix
+           path: /
+           backend:
+                service:
+                  name: svc
                   port:
                    number: 8080
