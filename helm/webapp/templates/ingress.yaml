@@ -1,2 +1,22 @@
 ## Define ingress.yaml fpr exposing the app, using the <yourname>.appstellar.training hostname.
 
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: webapp-ardian-ingress
+  namespace: webapp-ardian
+  annotations:
+            app.kubernetes.io/name: aws-load-balancer-controller
+spec:
+  ingressClassName: alb 
+  rules:
+    - host: ardian.appstellar.training
+        http:
+         paths:
+             - path: /
+               pathType: Prefix
+              backend:
+                service: svc
+                  name: 
+                  port:
+                   number: 8080
