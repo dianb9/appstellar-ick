@@ -9,6 +9,7 @@ metadata:
             alb.ingress.kubernetes.io/target-type: ip
             app.ingress.kubernetes.io/group.name: common-alb
             app.kubernetes.io/scheme: internet-facing
+            app.kubernetes.io/managed-by: Helm
 spec:
   ingressClassName: alb 
   rules:
