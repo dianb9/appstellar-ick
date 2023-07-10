@@ -6,10 +6,9 @@ metadata:
   name: webapp-ardian-ingress
   namespace: webapp-ardian
   annotations:
-            alb.ingress.kubernetes.io/target-type: ip
-            app.ingress.kubernetes.io/group.name: common-alb
-            app.kubernetes.io/scheme: internet-facing
-            app.kubernetes.io/managed-by: Helm
+            alb.ingress.kubernetes.io/target-type: 'ip'
+            alb.ingress.kubernetes.io/group.name: common-alb
+            alb.ingress.kubernetes.io/scheme: internet-facing
 spec:
   ingressClassName: alb 
   rules:
