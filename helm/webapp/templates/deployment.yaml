@@ -16,7 +16,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - image: 313422618945.dkr.ecr.eu-central-1.amazonaws.com/ardian-ick
+      - image: 313422618945.dkr.ecr.eu-central-1.amazonaws.com/ardian-ick:dev
         name: nextjs
         envFrom:
         - configMapRef:
