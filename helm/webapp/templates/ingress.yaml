@@ -6,7 +6,8 @@ metadata:
   name: webapp-ardian-ingress
   namespace: webapp-ardian
   annotations:
-            app.kubernetes.io/name: aws-load-balancer-controller
+            alb.ingress.kubernetes.io/target-type: ip
+            app.ingress.kubernetes.io/group.name: common-alb
             app.kubernetes.io/scheme: internet-facing
 spec:
   ingressClassName: alb 
