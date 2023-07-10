@@ -44,5 +44,4 @@ jobs:
           aws eks update-kubeconfig --name=my-eks-cluster --region=eu-central-1
 
       - name: Deploy helm chart
-        run: |
-          helm upgrade webapp-ardian ./helm/webapp --install
+        run: helm upgrade webapp-ardian ./helm/webapp --install
