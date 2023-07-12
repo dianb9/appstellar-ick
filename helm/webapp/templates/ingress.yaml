@@ -9,6 +9,8 @@ metadata:
             alb.ingress.kubernetes.io/target-type: 'ip'
             alb.ingress.kubernetes.io/group.name: common-alb
             alb.ingress.kubernetes.io/scheme: internet-facing
+            alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:eu-central-1:313422618945:certificate/626415cc-8055-494f-bc53-7609e762b50e
+            alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
 spec:
   ingressClassName: alb 
   rules:
@@ -22,3 +24,4 @@ spec:
                   name: svc
                   port:
                    number: 80
+
