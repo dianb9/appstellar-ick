@@ -39,3 +39,8 @@ module "acm" {
     Name = "ardian.${local.domain}"
   }
 }
+
+output "certificate_arn" {
+
+    value = module.acm.acm_certificate_arn
+}
